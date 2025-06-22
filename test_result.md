@@ -137,15 +137,18 @@ backend:
 
   - task: "Giveaway Management System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Implemented full CRUD operations for giveaways: GET /api/giveaways (all), GET /api/giveaways/active (active only), POST /api/admin/giveaways (create), DELETE /api/admin/giveaways/{id} (delete), PUT /api/admin/giveaways/{id} (update). Uses MongoDB for persistence."
+        - working: true
+          agent: "testing"
+          comment: "Thoroughly tested all giveaway management endpoints. Successfully created, updated, and deleted giveaways. The system correctly handles validation for future dates and rejects past dates and invalid date formats. GET endpoints for all giveaways and active giveaways work correctly. Community stats endpoint returns proper statistics."
 
 frontend:
   - task: "Tiger-themed Landing Page"
