@@ -1,0 +1,13 @@
+{
+  "name": "rbc-community-website",
+  "version": "1.0.0",
+  "description": "RBC Community Website with Tiger Theme",
+  "main": "server.py",
+  "scripts": {
+    "start": "python server.py"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
