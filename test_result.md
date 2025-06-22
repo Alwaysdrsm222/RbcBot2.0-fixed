@@ -107,15 +107,18 @@ user_problem_statement: "Make me an website with the main thing beeing 'Rbc Comm
 backend:
   - task: "Tiger-themed RBC Community Backend API"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Just implemented complete FastAPI backend with MongoDB for RBC Community. Includes giveaway CRUD operations, admin authentication with password 'Rbcadminpass2025', health checks, and community stats endpoints. Uses UUIDs for giveaway IDs and proper error handling."
+        - working: true
+          agent: "testing"
+          comment: "Tested the root endpoint and health check endpoint. Both are working correctly. The root endpoint returns a 200 status code with a message indicating the API is running. The health check endpoint confirms database connectivity."
 
   - task: "Admin Authentication System"
     implemented: true
